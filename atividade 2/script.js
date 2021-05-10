@@ -47,19 +47,58 @@ function inventoryValue() {
 
 function totalDepartmentItems(departamentId) {
 	let total = 0;
+	const departament = products.filter(
+		product => product.departamento.idDepto == departamentId
+	);
+	for (let deparment of departament) {
+		var departamentName = deparment.departamento.nomeDepto;
+		total++;
+	}
+	console.log(
+		`para o departamento: ${departamentName}, o total de itens é: ${total}`
+	);
+}
 
+function totalDepartmentValue(departamentId) {
+	let total = 0;
+	let departamentName = "";
 	const departament = products.filter(
 		product => product.departamento.idDepto == departamentId
 	);
 
 	for (let deparment of departament) {
-		var departamentName = deparment.departamento.nomeDepto
-		total++;
+		departamentName = deparment.departamento.nomeDepto;
+		total += deparment.preco;
 	}
-	console.log(`para o departamento: ${departamentName}, o total de itens é: ${total}`);
+	console.log(
+		`para o departamento: ${departamentName}, o total de itens é: ${total}R$`
+	);
 }
+function inventoryTotalValue() {
+	let total = 0;
+	for (let product of products) {
+		total += product.preco / product.qtdEstoque;
+	}
+	console.log(total);
+}
+
+function inventoryTotalValue() {
+	let total = 0;
+	for (let product of products) {
+		total += product.preco / product.qtdEstoque;
+	}
+	console.log(total);
+}
+
+
+
 //quantitProducts();
 //featuredTotal();
 //availableItems();
 //inventoryValue();
-totalDepartmentItems(984);
+//totalDepartmentItems(984);
+//totalDepartmentValue(987);
+inventoryTotalValue();
+
+//Departamento mais valioso (qual o departamento que tem a maior somatória dos valores dos itens)
+
