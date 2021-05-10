@@ -40,27 +40,26 @@ function inventoryValue() {
 	let total = 0;
 
 	for (let product of products) {
-		total += product.preco * product.qtdEstoque
+		total += product.preco * product.qtdEstoque;
 	}
 	console.log(total);
 }
 
 function totalDepartmentItems(departamentId) {
-	let total = 0;	
-	const departament = products.find(
+	let total = 0;
+
+	const departament = products.filter(
 		product => product.departamento.idDepto == departamentId
 	);
-	for (let product of products) {
-		if (departament == product.departamento) {
-			total += product
-			departament
-		}
+
+	for (let deparment of departament) {
+		var departamentName = deparment.departamento.nomeDepto
+		total++;
 	}
-	console.log(total, departament);
+	console.log(`para o departamento: ${departamentName}, o total de itens é: ${total}`);
 }
 //quantitProducts();
 //featuredTotal();
 //availableItems();
 //inventoryValue();
-totalDepartmentItems(987);
-
+totalDepartmentItems(984);
