@@ -1,0 +1,63 @@
+[
+  {
+    "codProduto": 1234,
+    "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+    "preco": 3500.00,
+    "qtdEstoque": 5,
+    "disponivel": "sim",
+    "emDestaque": "sim",
+    "departamento": {
+      "idDepto": 987,
+      "nomeDepto": "Informatica e acessórios"
+    }
+  },
+    {
+      "codProduto": 1234,
+      "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+      "preco": 3500.00,
+      "qtdEstoque": 5,
+      "disponivel": "sim",
+      "emDestaque": "sim",
+      "departamento": {
+        "idDepto": 987,
+        "nomeDepto": "Informatica e acessórios"
+      }
+    },
+      {
+        "codProduto": 1234,
+        "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+        "preco": 3500.00,
+        "qtdEstoque": 5,
+        "disponivel": "sim",
+        "emDestaque": "sim",
+        "departamento": {
+          "idDepto": 987,
+          "nomeDepto": "Informatica e acessórios"
+        }
+      },
+        {
+          "codProduto": 1234,
+          "descricao": "Sabão em pó",
+          "preco": 35.00,
+          "qtdEstoque": 5,
+          "disponivel": "sim",
+          "emDestaque": "sim",
+          "departamento": {
+            "idDepto": 984,
+            "nomeDepto": "Limpeza"
+          }
+        },
+          {
+            "codProduto": 1234,
+            "descricao": "Computador Dell Inspiron XS 12000 8Gb RAM 1 TB HD Intel i5 4g NVidia 1080",
+            "preco": 3500.00,
+            "qtdEstoque": 5,
+            "disponivel": "sim",
+            "emDestaque": "sim",
+            "departamento": {
+              "idDepto": 987,
+              "nomeDepto": "Informatica e acessórios"
+            }
+          }
+          
+]

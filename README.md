@@ -37,3 +37,4 @@
 | Criar consultas entre três tabelas   |  01h |  10/05 |  12/05 |
 | Criar consultas entre duas tabelas + operação de totalização e agrupamento   | 03h   | 12/05  | 15/05 |
 | Elaborar relatório de entrega   | 03h  |  12/05 | 15/05  |
+  
