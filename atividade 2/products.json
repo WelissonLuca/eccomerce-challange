@@ -29,7 +29,7 @@
         "preco": 3500.00,
         "qtdEstoque": 5,
         "disponivel": "sim",
-        "emDestaque": "sim",
+        "emDestaque": "nao",
         "departamento": {
           "idDepto": 987,
           "nomeDepto": "Informatica e acessórios"
@@ -41,7 +41,7 @@
           "preco": 35.00,
           "qtdEstoque": 5,
           "disponivel": "sim",
-          "emDestaque": "sim",
+          "emDestaque": "nao",
           "departamento": {
             "idDepto": 984,
             "nomeDepto": "Limpeza"
