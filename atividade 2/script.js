@@ -1,12 +1,12 @@
 const products = require("./products.json");
 
-function quantitProducts() {
+function quantityProducts() {
 	// Função para o calculo da qtd total de items em estoque
 	let total = 0;
 	for (let product of products) {
 		total += product.qtdEstoque;
 	}
-	console.log(total);
+	console.log(`O total de items em estoque é: ${total}`);
 }
 
 function featuredTotal() {
@@ -15,11 +15,10 @@ function featuredTotal() {
 
 	for (let product of products) {
 		if (product.emDestaque == "sim") {
-			product.emDestaque;
 			total++;
 		}
 	}
-	console.log(total);
+	console.log(`Total de items em destaque é: ${total}`);
 }
 
 function availableItems() {
@@ -32,7 +31,7 @@ function availableItems() {
 			total++;
 		}
 	}
-	console.log(total);
+	console.log(`Total de items disponiveis é: ${total}`);
 }
 
 function inventoryValue() {
@@ -42,7 +41,11 @@ function inventoryValue() {
 	for (let product of products) {
 		total += product.preco * product.qtdEstoque;
 	}
-	console.log(total);
+	console.log(
+		`Valor total do inventário é: ${total
+			.toFixed(2)
+			.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}R$`
+	);
 }
 
 function totalDepartmentItems(departamentId) {
@@ -52,8 +55,8 @@ function totalDepartmentItems(departamentId) {
 		product => product.departamento.idDepto == departamentId
 	);
 	try {
-		if (!departament){
-				throw new Error("Depatamento não encontrado");
+		if (departament == false) {
+			throw new Error();
 		} else {
 			for (let deparment of departament) {
 				departamentName = deparment.departamento.nomeDepto;
@@ -64,67 +67,86 @@ function totalDepartmentItems(departamentId) {
 			);
 		}
 	} catch (err) {
-		console.error(err);	
+		console.log("Departamento não encontrado");
 	}
 }
 
 function totalDepartmentValue(departamentId) {
-	let total = 0;
-	let departamentName = "";
-	const departament = products.filter(
-		product => product.departamento.idDepto == departamentId
-	);
+		let total = 0;
+		let departamentName = "";
+		const departament = products.filter(
+			product => product.departamento.idDepto == departamentId
+		);
+	try {
+		if (departament == false) {
+			throw new Error();
+		} else {
+			let total = 0;
+			let departamentName = "";
+			const departament = products.filter(
+				product => product.departamento.idDepto == departamentId
+			);
 
-	for (let deparment of departament) {
-		departamentName = deparment.departamento.nomeDepto;
-		total += deparment.preco;
-	}
-	console.log(
-		`para o departamento: ${departamentName}, o total de itens é: ${total}R$`
-	);
-}
-function inventoryTotalValue() {
-	let total = 0;
-	for (let product of products) {
-		total += product.preco / product.qtdEstoque;
-	}
-	console.log(total);
-}
-
-function inventoryTotalValue() {
-	let total = 0;
-	for (let product of products) {
-		total += product.preco / product.qtdEstoque;
-	}
-	console.log(total);
-}
-
-
-function test() {
-	let total = [];
-	for (let product of products) {
-		total.push({
-			preco:product.preco, name:product.departamento.nomeDepto, estoque: product.qtdEstoque})
-	}
-	for(let deparment of total){
-		if(deparment.name === deparment.name){
-			if(deparment.name === deparment.name){
-				console.log(deparment.preco)	
+			for (let deparment of departament) {
+				departamentName = deparment.departamento.nomeDepto;
+				total += deparment.preco;
 			}
+			console.log(
+				`para o departamento: ${departamentName}, o total de itens é: ${total
+					.toFixed(2)
+					.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}R$$`
+			);
 		}
+	} catch (err) {
+		console.log("Departamento não encontrado");
 	}
-	console.log(total)
-
 }
 
+function CompanyAverageTicket() {
+	let  stock = 0;
+	let  total = 0 
+	for (let product of products) {
+		total += product.preco * product.qtdEstoque;
+		stock += product.qtdEstoque;
+	}
+	total = total / stock;
 
-//quantitProducts();	
-//featuredTotal();
-//availableItems();
-//inventoryValue();
-//totalDepartmentItems(907);
-//totalDepartmentValue(987);
-//inventoryTotalValue();
+	console.log(`O ticker médio da empresa é: ${total.toFixed(2).toLocaleString("pt-br", { style: "currency", currency: "BRL" })}R$`);
+}
 
-//Departamento mais valioso (qual o departamento que tem a maior somatória dos valores dos itens)
-test()
+function averageTicket() {
+const productsList = new Map();
+for (product of products) {
+	productsList.set(
+		product.departamento.nomeDepto,
+		products
+			.filter(p => p.departamento.nomeDepto === product.departamento.nomeDepto)
+			.reduce((acc, cur) => acc + cur.preco * cur.qtdEstoque, 0)
+	);
+
+}
+	console.log(productsList.entries())
+	
+}
+function mostValuable() {
+	const productsList = new Map();
+	for (product of products) {
+		productsList.set(
+			product.departamento.nomeDepto,
+			products
+				.filter(
+					p => p.departamento.nomeDepto === product.departamento.nomeDepto
+				)
+				.reduce((acc, cur) => acc + cur.preco * cur.qtdEstoque, 0)
+		);
+	}
+}
+
+quantityProducts();
+featuredTotal();
+availableItems();
+inventoryValue();
+totalDepartmentItems(9);
+totalDepartmentValue(9);
+CompanyAverageTicket()
+//averageTicket();

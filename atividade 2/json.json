@@ -1,0 +1,74 @@
+[
+    {
+        "codProduto": 25754,
+        "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+        "preco": 8.0,
+        "qtdEstoque": 2,
+        "disponivel": "sim",
+        "emDestaque": "sim",
+        "departamento": {
+            "idDepto": 1,
+            "nomeDepto": "Adaptadores"
+        }
+    },
+    {
+        "codProduto": 20212,
+        "descricao": "ADAPTADOR CONECTOR HDMI FEMEA L / FEMEA",
+        "preco": 2.8,
+        "qtdEstoque": 2,
+        "disponivel": "sim",
+        "emDestaque": "sim",
+        "departamento": {
+            "idDepto": 1,
+            "nomeDepto": "Adaptadores"
+        }
+    },
+     {
+        "codProduto": 21300,
+        "descricao": "ADAPTADOR CONECTOR HDMI MACHO L / FEMEA",
+        "preco": 3.5,
+        "qtdEstoque": 2,
+        "disponivel": "sim",
+        "emDestaque": "nao",
+        "departamento": {
+            "idDepto": 1,
+            "nomeDepto": "Adaptadores"
+        }
+    },
+    {
+        "codProduto": 26608,
+        "descricao": "ADAPTADOR CONVERSOR 2VGA/RCA/S-VIDEO PRATA",
+        "preco": 10.4,
+        "qtdEstoque": 2,
+        "disponivel": "sim",
+        "emDestaque": "sim",
+        "departamento": {
+            "idDepto": 1,
+            "nomeDepto": "Adaptadores"
+        }
+    },
+    {
+        "codProduto": 13539,
+        "descricao": "ADAPTADOR CONVERSOR HDMI / RCA FULLHD 1080 BRANCO",
+        "preco": 14.0,
+        "qtdEstoque": 2,
+        "disponivel": "sim",
+        "emDestaque": "nao",
+        "departamento": {
+            "idDepto": 1,
+            "nomeDepto": "Adaptadores"
+        }
+    },
+    {
+        "codProduto": 13896,
+        "descricao": "ADAPTADOR EXTENDER / RJ45 BEGE",
+        "preco": 1.0,
+        "qtdEstoque": 2,
+        "disponivel": "sim",
+        "emDestaque": "sim",
+        "departamento": {
+            "idDepto": 1,
+            "nomeDepto": "Adaptadores"
+        }
+    }
+]
