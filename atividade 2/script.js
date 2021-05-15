@@ -42,9 +42,7 @@ function inventoryValue() {
 		total += product.preco * product.qtdEstoque;
 	}
 	console.log(
-		`Valor total do inventário é: ${total
-			.toFixed(2)
-			.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}R$`
+		`Valor total do inventário é: ${total.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}`
 	);
 }
 
@@ -92,9 +90,7 @@ function totalDepartmentValue(departamentId) {
 				total += deparment.preco;
 			}
 			console.log(
-				`para o departamento: ${departamentName}, o total de itens é: ${total
-					.toFixed(2)
-					.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}R$$`
+				`para o departamento: ${departamentName}, o total de itens é: ${total.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}`
 			);
 		}
 	} catch (err) {
@@ -111,7 +107,7 @@ function CompanyAverageTicket() {
 	}
 	total = total / stock;
 
-	console.log(`O ticker médio da empresa é: ${total.toFixed(2).toLocaleString("pt-br", { style: "currency", currency: "BRL" })}R$`);
+	console.log(`O ticker médio da empresa é: ${total.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}`);
 }
 
 function averageTicket() {
@@ -124,8 +120,21 @@ for (product of products) {
 			.reduce((acc, cur) => acc + cur.preco * cur.qtdEstoque, 0)
 	);
 
+
 }
-	console.log(productsList.entries())
+	const value = productsList.values()
+	const key = productsList.keys();
+	for (let i of productsList) {
+		console.log(
+			`Para o departamento: ${
+				key.next().value
+			}, o valor do ticket médio é: ${value
+				.next()
+				.value.toLocaleString("pt-br", { style: "currency", currency: "BRL" })
+			} `
+		);
+	}
+		
 	
 }
 function mostValuable() {
@@ -140,7 +149,15 @@ function mostValuable() {
 				.reduce((acc, cur) => acc + cur.preco * cur.qtdEstoque, 0)
 		);
 	}
+	let mostValuable = 0;
+	const value = productsList.values();
+	const key = productsList.keys();
+	for (let i of productsList) {
+		mostValuable =  Math.max(value.next().value)
+	}
+	console.log(mostValuable.toLocaleString("pt-br", { style: "currency", currency: "BRL" }));
 }
+mostValuable();
 
 quantityProducts();
 featuredTotal();
@@ -149,4 +166,4 @@ inventoryValue();
 totalDepartmentItems(9);
 totalDepartmentValue(9);
 CompanyAverageTicket()
-//averageTicket();
+averageTicket();
