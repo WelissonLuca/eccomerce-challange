@@ -1,0 +1,25 @@
+{
+  "name": "eccomerce-challange",
+  "version": "1.0.0",
+  "description": "<h2 align=\"center\">  Objetivo da sprint  </h2> <p align=\"center\">Criação de uma API para gerenciamento de produtos de um eccomerce</a> . </p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WelissonLuca/eccomerce-challange.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WelissonLuca/eccomerce-challange/issues"
+  },
+  "homepage": "https://github.com/WelissonLuca/eccomerce-challange#readme",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.2"
+  }
+}
