@@ -137,6 +137,7 @@ CREATE TABLE `pedidos` (
 ```
 
 </details>
+
 # INSERÇÃO DE DADOS
 
 <details>
